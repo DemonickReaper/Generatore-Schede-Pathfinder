@@ -1,0 +1,40 @@
+*{
+    overflow: auto;
+    font-family: 'open Sans';
+}
+p {
+    display:inline;
+}
+.row {
+    margin-top:3%;
+}
+.labels{
+    margin-left:10%;
+}
+#intro{
+    margin-right:10%;
+    margin-left:10%;
+}
+.container {
+    background-color: rgb(220, 244, 252);
+}
+
+#intro {
+    font-family: 'open Sans';
+    font-size:18px;
+    
+}
+
+#geneButton {
+    margin-left: 45%;
+}
+
+.dati {
+    font-size: 18px;
+}
+
+.labels {
+    font-weight: bold;
+    font-size:20px;
+    
+}
