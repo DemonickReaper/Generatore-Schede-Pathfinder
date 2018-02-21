@@ -7,11 +7,13 @@ $(document).ready(function(){
         var carr = geneCarr();
         var razza = geneRazza();
         var oro = arrayClasse[1];
+        var alli = geneAlli();
 
         $('#classe').append(classe);
         $('#carr').append(carr);
         $('#razza').append(razza);
-        $('#oro').append(oro);
+        $('#oro').append(oro+' Monete');
+        $('#alli').append(alli);
     })
 
     function geneClasse() {
@@ -109,6 +111,7 @@ $(document).ready(function(){
                 break;
             default:
                 classe = 'Problema nella generazioen della classe';
+                break;
         }
     return [classe,oro];
     }
@@ -260,15 +263,55 @@ $(document).ready(function(){
                 razza = 'Tiefling';
                 break;
             default:
-                razza = 'Problema nella generazioen della classe';
+                razza = 'Problema nella generazioen della razza';
+                break;
         }
         return razza;
     }
 
+    function geneAlli() {
+        var alli;
+        var seed = Math.floor((Math.random() * 9) + 1);
+        switch (seed) {
+            case 1:
+                alli = 'Legale Buono';
+                break;
+            case 2:
+                alli = 'Neutrale Buono';
+                break;
+            case 3:
+                alli = 'Caotico Buono';
+                break;
+            case 4:
+                alli = 'Legale Neutrale';
+                break;
+            case 5:
+                alli = 'Neutralissimo';
+                break;
+            case 6:
+                alli = 'Caotico Neutrale';
+                break;
+            case 7:
+                alli = 'Legale Malvagio';
+                break;
+            case 8:
+                alli = 'Neutrale Malvagio';
+                break;
+            case 9:
+                alli = 'Caotico Malvagio';
+                break;
+            default:
+                alli = 'Problema nella generazioen dell\'allineamento';
+                break;
+        }
+        return alli;
+    }
+    
     function pulisci(){
         $('#classe').contents().remove();
         $('#carr').contents().remove();
         $('#razza').contents().remove();
         $('#oro').contents().remove();
+        $('#alli').contents().remove();
     }
 })
