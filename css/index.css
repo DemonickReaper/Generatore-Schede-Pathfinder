@@ -14,15 +14,11 @@ p {
 #intro{
     margin-right:10%;
     margin-left:10%;
+    font-family: 'open Sans';
+    font-size:18px;
 }
 .container {
     background-color: rgb(220, 244, 252);
-}
-
-#intro {
-    font-family: 'open Sans';
-    font-size:18px;
-    
 }
 
 #geneButton {
